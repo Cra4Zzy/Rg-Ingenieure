@@ -1,203 +1,49 @@
 <!doctype html>
 <html lang="de">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Halden Hydro – fiktiver Lead-Gen-Funnel für ein Bewerbungs-Assessment." />
-  <meta name="theme-color" content="#0b2a25" />
-  <title>Halden Hydro — Investor Briefing</title>
-  <style>
-    :root{
-      --ink:#12201d;--muted:#61706b;--paper:#f4f0e7;--paper-2:#fbf8f1;
-      --green:#0b2a25;--green-2:#143c34;--river:#b7d8cf;--line:#d9d4c8;
-      --white:#fff;--risk:#8a5d26;--radius:22px;--shadow:0 18px 60px rgba(18,32,29,.10);
-    }
-    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--paper);color:var(--ink);line-height:1.55}
-    button,input{font:inherit} a{color:inherit}.wrap{width:min(1160px,calc(100% - 40px));margin:auto}
-    .assessment{background:#071d19;color:#dce9e5;text-align:center;padding:9px 16px;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
-    header{position:sticky;top:0;z-index:20;background:rgba(244,240,231,.88);backdrop-filter:blur(14px);border-bottom:1px solid rgba(18,32,29,.08)}
-    .nav{height:74px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:-.03em}.brand svg{width:34px;height:34px}.nav-note{font-size:13px;color:var(--muted)}
-    .btn{border:0;border-radius:999px;padding:13px 20px;background:var(--green);color:white;font-weight:750;cursor:pointer;transition:.2s transform,.2s background;display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none}.btn:hover{transform:translateY(-1px);background:var(--green-2)}.btn.secondary{background:transparent;color:var(--green);border:1px solid rgba(11,42,37,.22)}
-    .hero{padding:76px 0 48px;overflow:hidden}.hero-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:54px;align-items:center}.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.15em;font-weight:800;color:#50726a;margin-bottom:18px}.hero h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(48px,6vw,78px);line-height:.98;letter-spacing:-.045em;margin:0 0 24px;max-width:900px;font-weight:500}.hero .lead{font-size:20px;color:#42514d;max-width:680px;margin:0 0 28px}.hero-actions{display:flex;align-items:center;gap:14px;flex-wrap:wrap}.fine{font-size:12px;color:#6c7773;margin-top:14px}.visual{position:relative;min-height:470px;border-radius:32px;background:linear-gradient(160deg,#0e302a,#173f36);box-shadow:var(--shadow);overflow:hidden;color:white;padding:28px}.visual:before{content:"";position:absolute;width:440px;height:440px;border:68px solid rgba(183,216,207,.16);border-radius:50%;right:-170px;top:-90px}.visual:after{content:"";position:absolute;left:-15%;right:-15%;height:120px;bottom:86px;background:linear-gradient(180deg,rgba(183,216,207,.32),rgba(183,216,207,.05));transform:rotate(-7deg);border-radius:50%}.visual-label{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:#b8d4cc}.visual-big{position:absolute;left:28px;bottom:26px;z-index:2}.visual-big strong{display:block;font-family:Georgia,serif;font-size:76px;font-weight:500;line-height:.9}.visual-big span{font-size:14px;color:#d9e6e2}.plant-mark{position:absolute;right:36px;bottom:150px;width:130px;height:120px;z-index:2}.plant-mark .house{position:absolute;bottom:0;left:22px;width:88px;height:62px;border:2px solid rgba(255,255,255,.75);border-top:0}.plant-mark .roof{position:absolute;left:18px;bottom:61px;width:96px;height:40px;border-left:2px solid rgba(255,255,255,.75);border-top:2px solid rgba(255,255,255,.75);transform:skewY(-24deg)}.plant-mark .pipe{position:absolute;left:-15px;top:12px;width:116px;border-top:3px solid var(--river);transform:rotate(26deg);transform-origin:left}.plant-mark .wheel{position:absolute;left:47px;bottom:17px;width:36px;height:36px;border:2px solid var(--river);border-radius:50%}
-    .proof{padding:18px 0 72px}.proof-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.metric{padding:26px 18px;border-right:1px solid var(--line)}.metric:last-child{border-right:0}.metric strong{display:block;font-family:Georgia,serif;font-size:36px;font-weight:500}.metric span{font-size:13px;color:var(--muted)}
-    section{padding:86px 0}.section-head{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;margin-bottom:40px}.section-head h2{font-family:Georgia,serif;font-size:clamp(38px,4vw,58px);line-height:1.04;font-weight:500;letter-spacing:-.035em;margin:0}.section-head p{margin:7px 0 0;color:var(--muted);font-size:18px;max-width:650px}
-    .founder{background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.founder-card{display:grid;grid-template-columns:.9fr 1.1fr;border:1px solid var(--line);border-radius:28px;overflow:hidden;background:#fff}.portrait{min-height:430px;background:linear-gradient(145deg,#d7ded9,#a8bab4);position:relative;padding:28px;display:flex;align-items:flex-end}.portrait:before{content:"OVE";position:absolute;font-family:Georgia,serif;font-size:180px;color:rgba(255,255,255,.22);top:20px;left:22px;letter-spacing:-.08em}.portrait .tag{position:relative;background:rgba(255,255,255,.85);backdrop-filter:blur(8px);border-radius:14px;padding:12px 14px;font-size:13px}.founder-copy{padding:48px}.founder-copy h3{font-family:Georgia,serif;font-weight:500;font-size:38px;margin:0 0 14px}.founder-copy p{color:var(--muted);font-size:17px}.agenda{margin:26px 0;display:grid;gap:10px}.agenda div{padding:13px 0;border-bottom:1px solid var(--line);display:flex;gap:12px}.agenda b{color:#6f817b}
-    .questions{display:grid;gap:12px}.q{border-top:1px solid var(--line);padding:0}.q:last-child{border-bottom:1px solid var(--line)}.q button{width:100%;padding:20px 0;border:0;background:transparent;text-align:left;display:flex;align-items:center;justify-content:space-between;font-size:20px;font-weight:720;cursor:pointer;color:var(--ink)}.q button span:last-child{font-size:24px;font-weight:400}.answer{display:none;padding:0 0 22px;color:var(--muted);max-width:820px}.q.open .answer{display:block}.q.open button span:last-child{transform:rotate(45deg)}
-    .terms{background:var(--green);color:#f4f5f1}.terms .section-head p{color:#b9cbc6}.terms-grid{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid rgba(255,255,255,.16);border-radius:24px;overflow:hidden}.term{padding:24px;border-right:1px solid rgba(255,255,255,.14);border-bottom:1px solid rgba(255,255,255,.14)}.term:nth-child(3n){border-right:0}.term:nth-last-child(-n+3){border-bottom:0}.term span{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:#a8c0ba}.term strong{display:block;font-family:Georgia,serif;font-size:32px;font-weight:500;margin-top:7px}.risk{margin-top:20px;border-left:3px solid #d0a66c;padding:8px 0 8px 16px;color:#d9e1de;font-size:13px;max-width:900px}
-    .capture{background:var(--paper-2)}.capture-grid{display:grid;grid-template-columns:1fr .86fr;gap:56px;align-items:start}.capture-copy h2{font-family:Georgia,serif;font-size:clamp(42px,5vw,66px);font-weight:500;line-height:1.02;margin:0 0 20px;letter-spacing:-.04em}.capture-copy p{font-size:18px;color:var(--muted);max-width:620px}.pack-list{display:grid;gap:10px;margin-top:26px}.pack-list div{display:flex;align-items:flex-start;gap:10px}.dot{width:7px;height:7px;border-radius:50%;background:#70968c;margin-top:9px;flex:none}
-    .form-card{background:white;border:1px solid var(--line);border-radius:24px;padding:28px;box-shadow:var(--shadow)}.form-card h3{margin:0 0 4px;font-size:22px}.form-card .small{font-size:13px;color:var(--muted);margin:0 0 22px}.field{margin-bottom:15px}.field label{display:block;font-size:13px;font-weight:700;margin-bottom:7px}.field input{width:100%;border:1px solid #cbc7bd;border-radius:12px;padding:14px 15px;background:#fff;color:var(--ink);outline:none}.field input:focus{border-color:#63887e;box-shadow:0 0 0 3px rgba(99,136,126,.12)}.check{display:flex;gap:9px;align-items:flex-start;font-size:12px;color:var(--muted);margin:16px 0}.check input{margin-top:3px}.submit{width:100%;padding:15px}.privacy{font-size:11px;color:#7c8582;margin-top:10px;text-align:center}.error{color:#a23c32;font-size:12px;margin-top:6px;display:none}.success{display:none;text-align:left}.success .checkmark{width:52px;height:52px;border-radius:50%;background:#dcece7;display:grid;place-items:center;color:var(--green);font-size:24px;margin-bottom:18px}.success h3{font-family:Georgia,serif;font-size:34px;font-weight:500}.nexts{display:grid;gap:10px;margin-top:18px}.next{border:1px solid var(--line);border-radius:14px;padding:14px;background:#fff;text-align:left;cursor:pointer}.next strong{display:block}.next span{font-size:12px;color:var(--muted)}
-    footer{padding:34px 0 92px;border-top:1px solid var(--line);color:var(--muted);font-size:12px}.foot{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}.mobile-cta{display:none;position:fixed;left:14px;right:14px;bottom:14px;z-index:30;box-shadow:0 12px 40px rgba(0,0,0,.18)}
-    .toast{position:fixed;right:18px;bottom:18px;z-index:60;background:#112d27;color:white;border-radius:14px;padding:14px 16px;box-shadow:var(--shadow);opacity:0;transform:translateY(10px);pointer-events:none;transition:.25s;max-width:340px}.toast.show{opacity:1;transform:none}
-    @media(max-width:850px){.wrap{width:min(100% - 28px,1160px)}.nav-note{display:none}.hero{padding-top:44px}.hero-grid,.section-head,.founder-card,.capture-grid{grid-template-columns:1fr}.visual{min-height:340px}.hero h1{font-size:50px}.proof-grid{grid-template-columns:1fr 1fr}.metric:nth-child(2){border-right:0}.metric:nth-child(-n+2){border-bottom:1px solid var(--line)}.section-head{gap:16px}.founder-copy{padding:30px}.portrait{min-height:300px}.terms-grid{grid-template-columns:1fr 1fr}.term:nth-child(3n){border-right:1px solid rgba(255,255,255,.14)}.term:nth-child(2n){border-right:0}.term:nth-last-child(-n+3){border-bottom:1px solid rgba(255,255,255,.14)}.term:nth-last-child(-n+2){border-bottom:0}.mobile-cta{display:flex}footer{padding-bottom:110px}}
-    @media(max-width:520px){.hero h1{font-size:43px}.hero .lead{font-size:17px}.hero-actions .btn{width:100%}.proof-grid{grid-template-columns:1fr}.metric{border-right:0;border-bottom:1px solid var(--line)!important}.metric:last-child{border-bottom:0!important}.terms-grid{grid-template-columns:1fr}.term{border-right:0!important;border-bottom:1px solid rgba(255,255,255,.14)!important}.term:last-child{border-bottom:0!important}.capture-copy h2{font-size:43px}.visual-big strong{font-size:58px}}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Halden Hydro – fiktiver Lead-Gen-Funnel für ein Bewerbungs-Assessment.">
+<meta name="theme-color" content="#0b2a25">
+<title>Halden Hydro — Investor Briefing</title>
+<style>
+:root{--ink:#13211e;--muted:#62716c;--paper:#f4f0e7;--paper2:#fbf8f1;--green:#0b2a25;--green2:#153b34;--mint:#b8d8cf;--line:#d9d4c8;--white:#fff;--shadow:0 18px 55px rgba(19,33,30,.09)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.55}a{color:inherit}button,input{font:inherit}.wrap{width:min(1160px,calc(100% - 40px));margin:auto}.assessment{padding:8px 15px;background:#071d19;color:#d9e7e3;text-align:center;font-size:11px;letter-spacing:.1em;text-transform:uppercase}header{position:sticky;top:0;z-index:20;background:rgba(244,240,231,.9);backdrop-filter:blur(15px);border-bottom:1px solid rgba(19,33,30,.08)}.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:11px;font-weight:800;letter-spacing:-.03em}.brand svg{width:34px;height:34px}.nav-note{font-size:13px;color:var(--muted)}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:999px;padding:13px 20px;background:var(--green);color:#fff;text-decoration:none;font-weight:760;cursor:pointer;transition:.2s}.btn:hover{background:var(--green2);transform:translateY(-1px)}.btn.secondary{background:transparent;color:var(--green);border:1px solid rgba(11,42,37,.24)}
+.hero{padding:74px 0 45px}.hero-grid{display:grid;grid-template-columns:1.13fr .87fr;gap:52px;align-items:center}.eyebrow{font-size:12px;letter-spacing:.15em;text-transform:uppercase;font-weight:800;color:#54766d;margin-bottom:16px}.hero h1,.section-head h2,.capture h2{font-family:Georgia,"Times New Roman",serif;font-weight:500;letter-spacing:-.04em}.hero h1{font-size:clamp(48px,6vw,78px);line-height:.98;margin:0 0 23px}.lead{font-size:20px;color:#42514d;max-width:690px;margin:0 0 28px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap}.fine{margin-top:14px;color:#6f7a76;font-size:12px}.visual{position:relative;min-height:470px;border-radius:30px;overflow:hidden;background:linear-gradient(160deg,#0d3029,#164338);box-shadow:var(--shadow);color:#fff;padding:28px}.visual:before{content:"";position:absolute;width:430px;height:430px;border:68px solid rgba(184,216,207,.14);border-radius:50%;right:-180px;top:-90px}.visual:after{content:"";position:absolute;left:-12%;right:-12%;bottom:95px;height:110px;background:linear-gradient(rgba(184,216,207,.30),rgba(184,216,207,.04));transform:rotate(-7deg);border-radius:50%}.visual-label{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#b9d6ce}.visual-stat{position:absolute;left:28px;bottom:26px;z-index:2}.visual-stat strong{display:block;font-family:Georgia,serif;font-size:74px;font-weight:500;line-height:.9}.visual-stat span{font-size:14px;color:#dae8e4}.plant{position:absolute;right:35px;bottom:145px;width:142px;height:125px;z-index:2}.plant .house{position:absolute;bottom:0;left:29px;width:88px;height:62px;border:2px solid rgba(255,255,255,.75);border-top:0}.plant .roof{position:absolute;left:24px;bottom:61px;width:98px;height:38px;border-left:2px solid rgba(255,255,255,.75);border-top:2px solid rgba(255,255,255,.75);transform:skewY(-23deg)}.plant .pipe{position:absolute;left:-15px;top:10px;width:128px;border-top:3px solid var(--mint);transform:rotate(28deg);transform-origin:left}.plant .wheel{position:absolute;left:54px;bottom:16px;width:36px;height:36px;border:2px solid var(--mint);border-radius:50%}
+.proof{padding:18px 0 72px}.proof-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.metric{padding:25px 18px;border-right:1px solid var(--line)}.metric:last-child{border-right:0}.metric strong{display:block;font-family:Georgia,serif;font-size:35px;font-weight:500}.metric span{font-size:13px;color:var(--muted)}section{padding:84px 0}.section-head{display:grid;grid-template-columns:.8fr 1.2fr;gap:38px;margin-bottom:40px}.section-head h2{font-size:clamp(38px,4vw,57px);line-height:1.04;margin:0}.section-head p{font-size:18px;color:var(--muted);margin:7px 0 0;max-width:660px}
+.founder{background:var(--paper2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.founder-card{display:grid;grid-template-columns:.9fr 1.1fr;background:#fff;border:1px solid var(--line);border-radius:28px;overflow:hidden}.portrait{position:relative;min-height:420px;padding:28px;display:flex;align-items:flex-end;background:linear-gradient(145deg,#d8dfda,#a7bbb4)}.portrait:before{content:"OVE";position:absolute;top:18px;left:22px;font:500 174px/1 Georgia,serif;letter-spacing:-.09em;color:rgba(255,255,255,.22)}.portrait-tag{position:relative;padding:12px 14px;border-radius:14px;background:rgba(255,255,255,.86);font-size:13px}.founder-copy{padding:46px}.founder-copy h3{font:500 39px/1.08 Georgia,serif;margin:0 0 14px}.founder-copy p{font-size:17px;color:var(--muted)}.agenda{margin:24px 0;display:grid}.agenda div{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}.agenda b{color:#6b8079}
+.project{background:#fff}.project-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}.panel{border:1px solid var(--line);border-radius:24px;padding:28px;background:var(--paper2)}.panel h3{font:500 31px/1.1 Georgia,serif;margin:0 0 15px}.panel p{color:var(--muted);margin:0}.hydro-diagram{margin-top:28px;border-radius:18px;background:var(--green);color:#fff;padding:24px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.hydro-step{padding:4px 8px}.hydro-step span{display:block;color:#a9c6be;font-size:11px;text-transform:uppercase;letter-spacing:.1em}.hydro-step strong{display:block;margin-top:6px;font-size:15px}.specs{display:grid;margin-top:8px}.spec{display:flex;justify-content:space-between;gap:20px;padding:13px 0;border-bottom:1px solid var(--line)}.spec:last-child{border-bottom:0}.spec span{color:var(--muted);font-size:14px}.spec strong{text-align:right;font-size:14px}
+.evidence-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.evidence-card{min-height:190px;border:1px solid var(--line);border-radius:20px;padding:22px;background:var(--paper2)}.evidence-card .num{font:500 30px Georgia,serif;color:#5d7e75}.evidence-card h3{font-size:17px;margin:24px 0 7px}.evidence-card p{font-size:13px;color:var(--muted);margin:0}.evidence-note{margin-top:22px;font-size:13px;color:var(--muted)}
+.questions{display:grid}.q{border-top:1px solid var(--line)}.q:last-child{border-bottom:1px solid var(--line)}.q button{width:100%;padding:20px 0;border:0;background:transparent;color:var(--ink);cursor:pointer;text-align:left;display:flex;justify-content:space-between;gap:24px;font-size:20px;font-weight:720}.q button span:last-child{font-size:24px;font-weight:400}.answer{display:none;max-width:850px;padding:0 0 22px;color:var(--muted)}.q.open .answer{display:block}.q.open button span:last-child{transform:rotate(45deg)}
+.terms{background:var(--green);color:#f5f6f3}.terms .section-head p{color:#b7cac5}.terms-grid{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid rgba(255,255,255,.15);border-radius:23px;overflow:hidden}.term{padding:23px;border-right:1px solid rgba(255,255,255,.13);border-bottom:1px solid rgba(255,255,255,.13)}.term:nth-child(3n){border-right:0}.term:nth-last-child(-n+3){border-bottom:0}.term span{display:block;color:#a7c0ba;font-size:11px;letter-spacing:.1em;text-transform:uppercase}.term strong{display:block;margin-top:7px;font:500 31px Georgia,serif}.risk{max-width:930px;margin-top:20px;padding:8px 0 8px 16px;border-left:3px solid #d0a66c;color:#d7e1dd;font-size:13px}
+.pack{background:#fff}.pack-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.doc{border-top:2px solid var(--green);padding:20px 4px 6px}.doc small{display:block;color:#789089;text-transform:uppercase;letter-spacing:.08em}.doc strong{display:block;margin-top:8px;font-size:15px}.doc p{margin:6px 0 0;font-size:12px;color:var(--muted)}
+.capture{background:var(--paper2)}.capture-grid{display:grid;grid-template-columns:1fr .86fr;gap:54px;align-items:start}.capture h2{font-size:clamp(42px,5vw,65px);line-height:1.02;margin:0 0 20px}.capture-copy>p{font-size:18px;color:var(--muted);max-width:620px}.pack-list{display:grid;gap:10px;margin-top:25px}.pack-list div{display:flex;gap:10px}.dot{width:7px;height:7px;background:#70968c;border-radius:50%;margin-top:9px;flex:none}.form-card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:28px;box-shadow:var(--shadow)}.form-card h3{margin:0 0 4px;font-size:22px}.small{font-size:13px;color:var(--muted);margin:0 0 21px}.field{margin-bottom:14px}.field label{display:block;font-size:13px;font-weight:700;margin-bottom:7px}.field input{width:100%;padding:14px 15px;border:1px solid #cbc7bd;border-radius:12px;outline:none}.field input:focus{border-color:#63887e;box-shadow:0 0 0 3px rgba(99,136,126,.12)}.check{display:flex;gap:9px;align-items:flex-start;margin:15px 0;font-size:12px;color:var(--muted)}.check input{margin-top:3px}.submit{width:100%;padding:15px}.privacy{font-size:11px;color:#7c8582;margin-top:10px;text-align:center}.error{display:none;color:#a23c32;font-size:12px;margin-top:5px}.success{display:none}.checkmark{width:52px;height:52px;display:grid;place-items:center;border-radius:50%;background:#dcece7;color:var(--green);font-size:24px;margin-bottom:18px}.success h3{font:500 34px Georgia,serif}.nexts{display:grid;gap:10px;margin-top:17px}.next{padding:14px;border:1px solid var(--line);border-radius:14px;background:#fff;text-align:left;cursor:pointer}.next strong{display:block}.next span{font-size:12px;color:var(--muted)}
+footer{padding:34px 0 95px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}.foot{display:grid;grid-template-columns:1fr 1fr;gap:25px}.foot-right{text-align:right}.mobile-cta{display:none;position:fixed;left:14px;right:14px;bottom:14px;z-index:30;box-shadow:0 12px 35px rgba(0,0,0,.17)}.toast{position:fixed;right:18px;bottom:18px;z-index:50;max-width:340px;padding:14px 16px;border-radius:14px;background:#112d27;color:#fff;box-shadow:var(--shadow);opacity:0;transform:translateY(10px);pointer-events:none;transition:.25s}.toast.show{opacity:1;transform:none}
+@media(max-width:850px){.wrap{width:min(100% - 28px,1160px)}.nav-note{display:none}.hero{padding-top:44px}.hero-grid,.section-head,.founder-card,.project-grid,.capture-grid{grid-template-columns:1fr}.visual{min-height:340px}.hero h1{font-size:50px}.proof-grid{grid-template-columns:1fr 1fr}.metric:nth-child(2){border-right:0}.metric:nth-child(-n+2){border-bottom:1px solid var(--line)}.founder-copy{padding:30px}.portrait{min-height:300px}.evidence-grid{grid-template-columns:1fr 1fr}.terms-grid{grid-template-columns:1fr 1fr}.term:nth-child(3n){border-right:1px solid rgba(255,255,255,.13)}.term:nth-child(2n){border-right:0}.term:nth-last-child(-n+3){border-bottom:1px solid rgba(255,255,255,.13)}.term:nth-last-child(-n+2){border-bottom:0}.pack-grid{grid-template-columns:1fr 1fr}.mobile-cta{display:flex}.foot{grid-template-columns:1fr}.foot-right{text-align:left}}
+@media(max-width:520px){.hero h1{font-size:43px}.lead{font-size:17px}.hero-actions .btn{width:100%}.proof-grid,.evidence-grid,.pack-grid,.terms-grid{grid-template-columns:1fr}.metric{border-right:0;border-bottom:1px solid var(--line)!important}.metric:last-child{border-bottom:0!important}.term{border-right:0!important;border-bottom:1px solid rgba(255,255,255,.13)!important}.term:last-child{border-bottom:0!important}.hydro-diagram{grid-template-columns:1fr}.capture h2{font-size:43px}.visual-stat strong{font-size:58px}}
+</style>
 </head>
 <body>
-  <div class="assessment">Assessment prototype · Fictional company · No real investment offer</div>
-  <header>
-    <div class="wrap nav">
-      <div class="brand" aria-label="Halden Hydro">
-        <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#0b2a25"/><path d="M10 24c7-10 13-13 21-14-4 6-5 13-5 21-5-4-10-6-16-7Z" fill="#b7d8cf"/><path d="M12 25c7 0 12 2 15 6" fill="none" stroke="#f4f0e7" stroke-width="2" stroke-linecap="round"/></svg>
-        <span>Halden Hydro</span>
-      </div>
-      <div class="nav-note">Kleine Wasserkraftwerke · Norwegen</div>
-      <a class="btn" href="#investor-pack">Investor-Paket</a>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero">
-      <div class="wrap hero-grid">
-        <div>
-          <div class="eyebrow">Norwegian small hydro · Projekt 04</div>
-          <h1>Bevor Sie auf die 9,4 % schauen, sehen Sie, was bereits läuft.</h1>
-          <p class="lead">Halden Hydro entwickelt und betreibt kleine Laufwasserkraftwerke in Norwegen. Drei Anlagen sind bereits in Betrieb. Für das vierte Projekt läuft aktuell die Finanzierungsrunde.</p>
-          <div class="hero-actions">
-            <a class="btn" href="#proof">Projekt zuerst prüfen</a>
-            <a class="btn secondary" href="#investor-pack">Investor-Paket ansehen</a>
-          </div>
-          <div class="fine">Ab 500 € · 5 Jahre · prognostiziert 9,4 % p.a. · Kapitalrisiko</div>
-        </div>
-        <div class="visual" role="img" aria-label="Abstrakte Darstellung eines kleinen Wasserkraftwerks">
-          <div class="visual-label">Proof before promise</div>
-          <div class="plant-mark"><div class="pipe"></div><div class="roof"></div><div class="house"></div><div class="wheel"></div></div>
-          <div class="visual-big"><strong>03</strong><span>Anlagen bereits in Betrieb</span></div>
-        </div>
-      </div>
-    </section>
-
-    <div class="proof" id="proof">
-      <div class="wrap proof-grid">
-        <div class="metric"><strong>3</strong><span>Anlagen in Betrieb</span></div>
-        <div class="metric"><strong>2014</strong><span>von Ove Halden gegründet</span></div>
-        <div class="metric"><strong>340</strong><span>Investoren bisher</span></div>
-        <div class="metric"><strong>€1,6 Mio.</strong><span>von €4,2 Mio. zugesagt</span></div>
-      </div>
-    </div>
-
-    <section class="founder">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>Wer steckt dahinter?</h2>
-          <p>Bei einem unbekannten Investment sollte die Person hinter dem Projekt sichtbar sein, bevor die Rendite zum Hauptargument wird.</p>
-        </div>
-        <div class="founder-card">
-          <div class="portrait"><div class="tag">Founder briefing · ca. 2 Minuten<br><strong>Ove Halden</strong></div></div>
-          <div class="founder-copy">
-            <div class="eyebrow">Founder · Engineer</div>
-            <h3>Ove Halden</h3>
-            <p>Zwölf Jahre arbeitete Ove bei einem regionalen Energieversorger. 2014 gründete er Halden Hydro. Heute betreibt das Unternehmen drei Anlagen.</p>
-            <div class="agenda">
-              <div><b>01</b><span>Was bereits gebaut wurde</span></div>
-              <div><b>02</b><span>Welche Fragen vor einer Investition wichtig sind</span></div>
-              <div><b>03</b><span>Wie das vierte Projekt eingeordnet wird</span></div>
-            </div>
-            <a class="btn" href="#investor-pack">Unterlagen zuerst ansehen</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="wrap">
-        <div class="section-head">
-          <h2>Die Fragen, die seriöse Investoren stellen.</h2>
-          <p>Nicht mehr technische Details, sondern zuerst die Einwände beantworten, die das Investor-Relations-Team tatsächlich hört.</p>
-        </div>
-        <div class="questions">
-          <div class="q open"><button type="button"><span>Woher weiß ich, dass die Anlage wirklich gebaut wird?</span><span>+</span></button><div class="answer">Drei Anlagen sind bereits in Betrieb. Für das vierte Projekt sollten Interessenten die Projektunterlagen und den konkreten Verwendungszweck des Kapitals prüfen, bevor sie entscheiden.</div></div>
-          <div class="q"><button type="button"><span>Was passiert in einem trockenen Jahr?</span><span>+</span></button><div class="answer">Weniger Wasser kann die Stromproduktion beeinflussen. Die konkrete Sensitivität gehört deshalb transparent in die Produktionsannahmen des Investor-Pakets — ohne sie im Funnel schönzurechnen.</div></div>
-          <div class="q"><button type="button"><span>Was bedeutet die Laufzeit von fünf Jahren für mein Geld?</span><span>+</span></button><div class="answer">Das Kapital ist für fünf Jahre gebunden und die Liquidität kann eingeschränkt sein. Wer das Geld kurzfristig benötigt, sollte das vor einer Investition berücksichtigen.</div></div>
-          <div class="q"><button type="button"><span>Ist das vergleichbar mit gescheiterten Windpark-Investments?</span><span>+</span></button><div class="answer">Nicht pauschal. Entscheidend sind das konkrete Projekt, dessen Risiken und Unterlagen. Der Funnel sollte deshalb nicht über Vergleiche beruhigen, sondern die Fakten des Halden-Projekts prüfbar machen.</div></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="terms">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>Die Konditionen, ohne sie zu verstecken.</h2>
-          <p>Die Rendite bleibt sichtbar — aber erst nachdem Vertrauen, Projekt und Risiken eingeordnet wurden.</p>
-        </div>
-        <div class="terms-grid">
-          <div class="term"><span>Mindestinvestment</span><strong>€500</strong></div>
-          <div class="term"><span>Laufzeit</span><strong>5 Jahre</strong></div>
-          <div class="term"><span>Prognose</span><strong>9,4 % p.a.</strong></div>
-          <div class="term"><span>Runde</span><strong>€4,2 Mio.</strong></div>
-          <div class="term"><span>Zugesagt</span><strong>€1,6 Mio.</strong></div>
-          <div class="term"><span>Schließt</span><strong>30. Nov.</strong></div>
-        </div>
-        <div class="risk">Die 9,4 % sind eine Prognose und keine Garantie. Kapital ist mit Risiken verbunden. Zinsen werden laut Angebot jährlich ab Inbetriebnahme gezahlt. Das investierte Geld fließt in das Halden-Projekt, nicht in das Unternehmen als Ganzes. Dies ist ausschließlich ein fiktiver Assessment-Prototyp.</div>
-      </div>
-    </section>
-
-    <section class="capture" id="investor-pack">
-      <div class="wrap capture-grid">
-        <div class="capture-copy">
-          <div class="eyebrow">Nächster Schritt</div>
-          <h2>Erst die Unterlagen. Dann die Entscheidung.</h2>
-          <p>Der erste Conversion-Schritt bleibt bewusst klein. Keine Adresse, kein Geburtsdatum und kein gewünschter Anlagebetrag, bevor Vertrauen aufgebaut wurde.</p>
-          <div class="pack-list">
-            <div><span class="dot"></span><span>Projekt und Mittelverwendung</span></div>
-            <div><span class="dot"></span><span>Produktionsannahmen und zentrale Risiken</span></div>
-            <div><span class="dot"></span><span>Team, bestehende Anlagen und Konditionen</span></div>
-          </div>
-        </div>
-        <div class="form-card">
-          <div id="formState">
-            <h3>Investor-Paket anfordern</h3>
-            <p class="small">Nur Name und E-Mail. Weitere Fragen kommen später.</p>
-            <form id="leadForm" novalidate>
-              <div class="field"><label for="name">Vorname</label><input id="name" name="name" autocomplete="given-name" placeholder="Vorname" required><div class="error" id="nameError">Bitte Vornamen eingeben.</div></div>
-              <div class="field"><label for="email">E-Mail</label><input id="email" name="email" type="email" autocomplete="email" placeholder="name@beispiel.de" required><div class="error" id="emailError">Bitte gültige E-Mail eingeben.</div></div>
-              <label class="check"><input id="privacy" type="checkbox" required><span>Ich akzeptiere, dass meine Angaben für diesen fiktiven Assessment-Prototyp verarbeitet werden.</span></label>
-              <div class="error" id="privacyError">Bitte bestätigen.</div>
-              <button class="btn submit" type="submit">Investor-Paket senden →</button>
-              <div class="privacy">Keine echten Daten absenden. Demo-Formular ohne Datenspeicherung.</div>
-            </form>
-          </div>
-          <div class="success" id="successState" aria-live="polite">
-            <div class="checkmark">✓</div>
-            <h3>Das Paket ist auf dem Weg.</h3>
-            <p class="small">Im echten Funnel startet jetzt die E-Mail-Sequenz. Für den Prototyp können Sie den nächsten Schritt wählen.</p>
-            <div class="nexts">
-              <button class="next" data-message="Im echten Funnel öffnet dieser Schritt das Investor-Paket."><strong>Investor-Paket öffnen</strong><span>Projekt, Annahmen und Risiken prüfen</span></button>
-              <button class="next" data-message="Im echten Funnel kann der Interessent hier direkt eine Frage an Investor Relations senden."><strong>Frage stellen</strong><span>Offenen Einwand klären</span></button>
-              <button class="next" data-message="Im echten Funnel führt dieser Schritt zur Terminbuchung mit Investor Relations."><strong>Gespräch buchen</strong><span>Persönliche Fragen besprechen</span></button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="wrap foot"><span>Halden Hydro · fictional assessment company</span><span>Not a real investment offer · No real client data</span></div>
-  </footer>
-
-  <a class="btn mobile-cta" href="#investor-pack">Investor-Paket ansehen</a>
-  <div class="toast" id="toast"></div>
-
-  <script>
-    document.querySelectorAll('.q button').forEach(btn=>btn.addEventListener('click',()=>btn.parentElement.classList.toggle('open')));
-    const form=document.getElementById('leadForm');
-    const show=(id,on)=>document.getElementById(id).style.display=on?'block':'none';
-    form.addEventListener('submit',e=>{
-      e.preventDefault();
-      const name=document.getElementById('name');
-      const email=document.getElementById('email');
-      const privacy=document.getElementById('privacy');
-      const validEmail=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim());
-      show('nameError',!name.value.trim());show('emailError',!validEmail);show('privacyError',!privacy.checked);
-      if(!name.value.trim()||!validEmail||!privacy.checked)return;
-      document.getElementById('formState').style.display='none';
-      document.getElementById('successState').style.display='block';
-      document.querySelector('.mobile-cta').style.display='none';
-    });
-    const toast=document.getElementById('toast');
-    document.querySelectorAll('.next').forEach(btn=>btn.addEventListener('click',()=>{
-      toast.textContent=btn.dataset.message;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),3200);
-    }));
-  </script>
+<div class="assessment">Assessment prototype · Fictional company · No real investment offer</div>
+<header><div class="wrap nav"><div class="brand"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#0b2a25"/><path d="M10 24c7-10 13-13 21-14-4 6-5 13-5 21-5-4-10-6-16-7Z" fill="#b8d8cf"/><path d="M12 25c7 0 12 2 15 6" fill="none" stroke="#f4f0e7" stroke-width="2" stroke-linecap="round"/></svg><span>Halden Hydro</span></div><div class="nav-note">Kleine Wasserkraftwerke · Norwegen</div><a class="btn" href="#investor-pack">Investor-Paket</a></div></header>
+<main>
+<section class="hero"><div class="wrap hero-grid"><div><div class="eyebrow">Norwegian small hydro · Projekt 04</div><h1>Bevor Sie auf die 9,4 % schauen, sehen Sie, was bereits läuft.</h1><p class="lead">Halden Hydro entwickelt und betreibt kleine Laufwasserkraftwerke in Norwegen. Drei Anlagen sind bereits in Betrieb. Für das vierte Projekt läuft aktuell die Finanzierungsrunde.</p><div class="hero-actions"><a class="btn" href="#proof">Projekt zuerst prüfen</a><a class="btn secondary" href="#investor-pack">Investor-Paket ansehen</a></div><div class="fine">Ab 500 € · 5 Jahre · prognostiziert 9,4 % p.a. · Kapitalrisiko</div></div><div class="visual"><div class="visual-label">Proof before promise</div><div class="plant"><div class="pipe"></div><div class="roof"></div><div class="house"></div><div class="wheel"></div></div><div class="visual-stat"><strong>03</strong><span>Anlagen bereits in Betrieb</span></div></div></div></section>
+<div class="proof" id="proof"><div class="wrap proof-grid"><div class="metric"><strong>3</strong><span>Anlagen in Betrieb</span></div><div class="metric"><strong>2014</strong><span>von Ove Halden gegründet</span></div><div class="metric"><strong>340</strong><span>Investoren bisher</span></div><div class="metric"><strong>€1,6 Mio.</strong><span>von €4,2 Mio. zugesagt</span></div></div></div>
+<section class="founder"><div class="wrap"><div class="section-head"><h2>Wer steckt dahinter?</h2><p>Bei einem unbekannten Investment sollte die Person hinter dem Projekt sichtbar sein, bevor die Rendite zum Hauptargument wird.</p></div><div class="founder-card"><div class="portrait"><div class="portrait-tag">Founder briefing · ca. 2 Minuten<br><strong>Ove Halden</strong></div></div><div class="founder-copy"><div class="eyebrow">Founder · Mechanical engineer</div><h3>Ove Halden</h3><p>Ove arbeitete zwölf Jahre bei einem regionalen Energieversorger an Turbinenmodernisierung und Inbetriebnahmen, bevor er Halden Hydro 2014 gründete. Heute betreibt das Unternehmen drei Anlagen von Bergen aus.</p><div class="agenda"><div><b>01</b><span>12 Jahre Erfahrung beim regionalen Energieversorger</span></div><div><b>02</b><span>Drei bestehende Anlagen bereits in Betrieb</span></div><div><b>03</b><span>Investor-Fragen werden vom Team direkt beantwortet</span></div></div><a class="btn" href="#investor-pack">Unterlagen zuerst ansehen</a></div></div></div></section>
+<section class="project"><div class="wrap"><div class="section-head"><h2>Das vierte Projekt, einfach erklärt.</h2><p>Genug technische Information, um das Projekt einordnen zu können — ohne den Nutzer vor dem Vertrauensaufbau mit Fachbegriffen zu überladen.</p></div><div class="project-grid"><div class="panel"><div class="eyebrow">Wie es funktioniert</div><h3>Run-of-river statt Stausee.</h3><p>Ein Teil des natürlichen Flusswassers wird zur Turbine geleitet, erzeugt Strom und fließt anschließend wieder in den Fluss zurück. Es gibt keinen großen Speichersee.</p><div class="hydro-diagram"><div class="hydro-step"><span>01</span><strong>Wasser wird entnommen</strong></div><div class="hydro-step"><span>02</span><strong>Turbine erzeugt Strom</strong></div><div class="hydro-step"><span>03</span><strong>Wasser fließt zurück</strong></div></div></div><div class="panel"><div class="eyebrow">Halden site</div><h3>Die wichtigsten Projektdaten.</h3><div class="specs"><div class="spec"><span>Installierte Leistung</span><strong>4,2 MW</strong></div><div class="spec"><span>Brutto-Fallhöhe</span><strong>118 m</strong></div><div class="spec"><span>Erwartete Jahresproduktion</span><strong>14,6 GWh</strong></div><div class="spec"><span>Turbine</span><strong>Pelton, 2-Düsen</strong></div><div class="spec"><span>Geplante Inbetriebnahme</span><strong>Q3 2027</strong></div><div class="spec"><span>Auslegungslebensdauer</span><strong>40 Jahre</strong></div></div></div></div></div></section>
+<section><div class="wrap"><div class="section-head"><h2>Was ein Interessent prüfen kann.</h2><p>Vertrauen sollte nicht aus Werbeaussagen entstehen, sondern aus Dokumenten und nachvollziehbaren Annahmen.</p></div><div class="evidence-grid"><div class="evidence-card"><div class="num">01</div><h3>NVE-Konzession</h3><p>Die Projektseite nennt eine im März 2024 erteilte Konzession mit der Referenz 202400871-4.</p></div><div class="evidence-card"><div class="num">02</div><h3>22 Jahre Messdaten</h3><p>Die Produktionsannahmen stützen sich laut Projektseite auf langfristige Pegeldaten der NVE-Messstation.</p></div><div class="evidence-card"><div class="num">03</div><h3>Bestehende Anlagen</h3><p>Drei Wasserkraftwerke sind bereits in Betrieb und bilden den wichtigsten Track Record des Teams.</p></div><div class="evidence-card"><div class="num">04</div><h3>Produktionsmodell</h3><p>Interessenten sollen nachvollziehen können, auf welchen Annahmen die prognostizierte Produktion und Rendite beruhen.</p></div><div class="evidence-card"><div class="num">05</div><h3>Geprüfte Abschlüsse</h3><p>Das Investor-Paket enthält laut bestehender Seite geprüfte Abschlüsse für 2022 bis 2024.</p></div><div class="evidence-card"><div class="num">06</div><h3>Baufortschritt</h3><p>Die bestehende Projektseite nennt Juni als Baubeginn. Weitere Nachweise gehören in die vollständigen Projektunterlagen.</p></div></div><div class="evidence-note">Die Belege selbst werden in diesem Assessment-Prototyp nicht nachgebaut; im echten Funnel würden sie im Investor-Paket verlinkt bzw. bereitgestellt.</div></div></section>
+<section><div class="wrap"><div class="section-head"><h2>Die Fragen, die seriöse Investoren stellen.</h2><p>Die FAQ orientiert sich an den echten Einwänden aus Investorengesprächen und nicht primär an technischen Detailfragen.</p></div><div class="questions"><div class="q open"><button type="button"><span>Woher weiß ich, dass die Anlage wirklich gebaut wird?</span><span>+</span></button><div class="answer">Drei Anlagen sind bereits in Betrieb. Für das vierte Projekt sollten Interessenten Konzession, Projektunterlagen, Baufortschritt und Mittelverwendung prüfen, bevor sie entscheiden.</div></div><div class="q"><button type="button"><span>Was passiert in einem trockenen Jahr?</span><span>+</span></button><div class="answer">Weniger Wasser kann die Stromproduktion beeinflussen. Genau deshalb sollten Produktionsmodell, langfristige Messdaten und Sensitivitätsannahmen Teil der Prüfung sein.</div></div><div class="q"><button type="button"><span>Was bedeutet die Laufzeit von fünf Jahren für mein Geld?</span><span>+</span></button><div class="answer">Die Anlage hat eine fünfjährige Laufzeit. Liquidität während dieser Zeit kann eingeschränkt sein. Wer das Geld kurzfristig benötigt, sollte das vor einer Investition berücksichtigen.</div></div><div class="q"><button type="button"><span>Wer sind die Menschen hinter Halden Hydro?</span><span>+</span></button><div class="answer">Ove Halden ist Maschinenbauingenieur, arbeitete zwölf Jahre beim regionalen Energieversorger und gründete Halden Hydro 2014. Drei Anlagen sind bereits in Betrieb.</div></div><div class="q"><button type="button"><span>Ist das mit gescheiterten Windpark-Investments vergleichbar?</span><span>+</span></button><div class="answer">Nicht pauschal. Entscheidend sind das konkrete Projekt, dessen Struktur, Risiken und Unterlagen. Der Funnel soll deshalb Fakten prüfbar machen, statt mit pauschalen Vergleichen zu beruhigen.</div></div></div></div></section>
+<section class="terms"><div class="wrap"><div class="section-head"><h2>Die Konditionen, ohne sie zu verstecken.</h2><p>Die Rendite bleibt sichtbar — aber erst nachdem Unternehmen, Projekt und Risiken eingeordnet wurden.</p></div><div class="terms-grid"><div class="term"><span>Mindestinvestment</span><strong>€500</strong></div><div class="term"><span>Laufzeit</span><strong>5 Jahre</strong></div><div class="term"><span>Prognose</span><strong>9,4 % p.a.</strong></div><div class="term"><span>Rundengröße</span><strong>€4,2 Mio.</strong></div><div class="term"><span>Zugesagt</span><strong>€1,6 Mio.</strong></div><div class="term"><span>Schließt</span><strong>30. Nov.</strong></div></div><div class="risk">Die 9,4 % sind eine Prognose und keine Garantie. Kapital ist mit Risiken verbunden. Zinsen werden laut Angebot jährlich ab Inbetriebnahme gezahlt. Das investierte Geld fließt in das Halden-Projekt, nicht in das Unternehmen als Ganzes. Dies ist ausschließlich ein fiktiver Assessment-Prototyp.</div></div></section>
+<section class="pack"><div class="wrap"><div class="section-head"><h2>Was im Investor-Paket steckt.</h2><p>Der Nutzer soll vor der Lead-Abgabe genau wissen, welchen Gegenwert er für seine Kontaktdaten erhält.</p></div><div class="pack-grid"><div class="doc"><small>01 · PDF</small><strong>Projektprospekt</strong><p>34 Seiten Projekt- und Angebotsinformationen.</p></div><div class="doc"><small>02 · NVE</small><strong>Konzessionsunterlagen</strong><p>Genehmigungs- und Projektdokumente.</p></div><div class="doc"><small>03 · Modell</small><strong>Produktionsannahmen</strong><p>Grundlage für Produktion und Prognosen.</p></div><div class="doc"><small>04 · Finanzen</small><strong>Abschlüsse 2022–2024</strong><p>Geprüfte Unternehmenszahlen.</p></div><div class="doc"><small>05 · Nächster Schritt</small><strong>Zeichnungsformular</strong><p>Erst relevant, wenn der Interessent weitergehen will.</p></div></div></div></section>
+<section class="capture" id="investor-pack"><div class="wrap capture-grid"><div class="capture-copy"><div class="eyebrow">Nächster Schritt</div><h2>Erst die Unterlagen. Dann die Entscheidung.</h2><p>Der erste Conversion-Schritt bleibt bewusst klein. Keine Adresse, kein Geburtsdatum und kein Anlagebetrag, bevor genug Vertrauen aufgebaut wurde.</p><div class="pack-list"><div><span class="dot"></span><span>Projekt und Mittelverwendung</span></div><div><span class="dot"></span><span>Produktionsannahmen und zentrale Risiken</span></div><div><span class="dot"></span><span>Team, bestehende Anlagen und Unternehmenszahlen</span></div></div></div><div class="form-card"><div id="formState"><h3>Investor-Paket anfordern</h3><p class="small">Nur Name und E-Mail im ersten Schritt.</p><form id="leadForm" novalidate><div class="field"><label for="name">Vorname</label><input id="name" autocomplete="given-name" placeholder="Vorname" required><div class="error" id="nameError">Bitte Vornamen eingeben.</div></div><div class="field"><label for="email">E-Mail</label><input id="email" type="email" autocomplete="email" placeholder="name@beispiel.de" required><div class="error" id="emailError">Bitte gültige E-Mail eingeben.</div></div><label class="check"><input id="privacy" type="checkbox" required><span>Ich akzeptiere, dass meine Angaben für diesen fiktiven Assessment-Prototyp verarbeitet werden.</span></label><div class="error" id="privacyError">Bitte bestätigen.</div><button class="btn submit" type="submit">Investor-Paket senden →</button><div class="privacy">Demo-Formular ohne Datenspeicherung. Keine echten Daten absenden.</div></form></div><div class="success" id="successState" aria-live="polite"><div class="checkmark">✓</div><h3>Das Paket ist auf dem Weg.</h3><p class="small">Im echten Funnel startet jetzt die E-Mail-Sequenz. Im Prototyp können Sie den nächsten Schritt wählen.</p><div class="nexts"><button class="next" data-message="Im echten Funnel öffnet dieser Schritt das Investor-Paket."><strong>Investor-Paket öffnen</strong><span>Projekt, Annahmen und Risiken prüfen</span></button><button class="next" data-message="Im echten Funnel kann hier direkt eine Frage an Investor Relations gesendet werden."><strong>Frage stellen</strong><span>Offenen Einwand klären</span></button><button class="next" data-message="Im echten Funnel führt dieser Schritt zur Terminbuchung mit Investor Relations."><strong>Gespräch buchen</strong><span>Persönliche Fragen besprechen</span></button></div></div></div></div></section>
+</main>
+<footer><div class="wrap foot"><div><strong>Halden Hydro</strong><br>Strandgaten 197 · 5004 Bergen, Norway<br>Org.nr 913 774 208 MVA</div><div class="foot-right">Fictional assessment company<br>Not a real investment offer · No real client data</div></div></footer>
+<a class="btn mobile-cta" href="#investor-pack">Investor-Paket ansehen</a><div class="toast" id="toast"></div>
+<script>
+document.querySelectorAll('.q button').forEach(b=>b.addEventListener('click',()=>b.parentElement.classList.toggle('open')));
+const show=(id,on)=>document.getElementById(id).style.display=on?'block':'none';
+document.getElementById('leadForm').addEventListener('submit',e=>{e.preventDefault();const n=document.getElementById('name'),m=document.getElementById('email'),p=document.getElementById('privacy'),ok=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(m.value.trim());show('nameError',!n.value.trim());show('emailError',!ok);show('privacyError',!p.checked);if(!n.value.trim()||!ok||!p.checked)return;document.getElementById('formState').style.display='none';document.getElementById('successState').style.display='block';document.querySelector('.mobile-cta').style.display='none'});
+const toast=document.getElementById('toast');document.querySelectorAll('.next').forEach(b=>b.addEventListener('click',()=>{toast.textContent=b.dataset.message;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),3000)}));
+</script>
 </body>
 </html>
