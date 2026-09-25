@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 1000" role="img" aria-labelledby="t d">
+<title id="t">Architekturstudie Tragwerk</title><desc id="d">Abstrakte Darstellung eines modernen Tragwerks aus Beton, Stahl und Holz</desc>
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#dce3e4"/><stop offset=".55" stop-color="#b7c3c6"/><stop offset="1" stop-color="#74868d"/></linearGradient>
+<linearGradient id="beam" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#7f5d45"/><stop offset=".5" stop-color="#b88662"/><stop offset="1" stop-color="#6c4d39"/></linearGradient>
+<filter id="shadow"><feDropShadow dx="0" dy="20" stdDeviation="18" flood-opacity=".22"/></filter>
+</defs>
+<rect width="1500" height="1000" fill="url(#bg)"/>
+<path d="M0 760 1500 440v560H0Z" fill="#aeb9bb" opacity=".62"/>
+<g filter="url(#shadow)">
+<rect x="150" y="210" width="135" height="690" fill="#d9dddc"/>
+<rect x="590" y="95" width="140" height="805" fill="#c8cece"/>
+<rect x="1070" y="180" width="125" height="720" fill="#d5d9d8"/>
+<rect x="80" y="185" width="1230" height="92" transform="rotate(-7 80 185)" fill="url(#beam)"/>
+<rect x="250" y="400" width="1120" height="70" transform="rotate(-7 250 400)" fill="url(#beam)"/>
+<rect x="50" y="615" width="1200" height="62" transform="rotate(-7 50 615)" fill="#46575e"/>
+</g>
+<g stroke="#33464e" stroke-width="10" opacity=".8">
+<path d="M285 210 590 900M730 95 1070 900M1195 180 730 900"/>
+</g>
+<g fill="#1c3d50" opacity=".14"><circle cx="1240" cy="190" r="210"/><circle cx="260" cy="780" r="180"/></g>
+</svg>
